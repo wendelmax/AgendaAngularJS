@@ -1,0 +1,36 @@
+body{
+    padding-left: 25%;
+}
+table{
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    
+ }
+
+ th, td{
+     padding: 5px;
+     text-align: center;
+ }
+
+ tr:nth-child(even) {
+     background-color:lightgrey;
+    }
+    
+tr:not(:first-child):hover{
+    background-color:rgb(36, 16, 212);
+    color: aliceblue;
+    }
+
+tr:first-child{
+    background-color: darkslateblue;
+    color: azure;
+    font-size: larger;
+}
+.selecionado{
+    font-weight: bold;
+    background-color:darkblue !important;
+    color:white;
+}

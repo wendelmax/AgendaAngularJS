@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaTelefonica">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="angularjs/code.js"></script>
+</head>
+
+<body ng-controller="listaTelefonicaCtrl">
+    <h1>{{ titulo }}</h1>
+    <div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Operadora</th>
+            </tr>
+            <tr ng-class="{selecionado: isSelected }" ng-repeat="item in contatos">
+                <td><input type="checkbox" ng-model="isSelected"></td>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.telefone }}</td>
+                <td>{{ item.operadora }}</td>
+            </tr>
+        </table>
+        <p><input type="text" class="in1" ng-model="item.nome" placeholder="Insira seu nome"></p>
+        <p>
+            <input type="number" class="in2" ng-model="item.telefone" placeholder="Insira seu telefone">
+            <select ng-model="item.operadora" ng-options="operadora for operadora in operadoras"></select>
+        </p>
+        <button ng-click="adicionarContato(item)" ng-disabled="!(item.nome && item.telefone)">Adicionar</button>
+    </div>
+</body>
+
+</html>
