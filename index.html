@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="listaTelefonica">
-
+<html lang="pt-br" ng-app="aula8">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemplo Roting</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <link rel="stylesheet" href="css/estilo.css">
-    <script src="js/code.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    
 </head>
-
-<body ng-controller="listaTelefonicaCtrl">
-    <h1>{{ titulo }}</h1>
-    <div>
-        <table ng-show="contatos.length > 0">
-            <tr>
-                <th></th>
-                <th>Nome</th>
-                <th>DDD</th>
-                <th>Telefone</th>
-                <th>Operadora</th>
-                <th>Endereço</th>
-            </tr>
-            <tr ng-class="{selecionado: isSelected }" ng-repeat="item in contatos">
-                <td><input type="checkbox" ng-model="isSelected"></td>
-                <td>{{ item.nome }}</td>
-                <td>{{ item.ddd }}</td>
-                <td>{{ item.telefone }}</td>
-                <td>{{ item.operadora }}</td>
-                <td>{{ item.endereco }}</td>
-            </tr>
-        </table>
-        <p><input type="text" ng-model="item.nome" placeholder="Insira seu nome"></p>
-        <p><input type="number" ng-model="item.ddd" placeholder="Insira seu ddd"></p>
-        <p><input type="number" ng-model="item.telefone" placeholder="Insira seu telefone"></p>
-        <p><label>Operadora </label><select ng-model="item.operadora" ng-options="operadora for operadora in operadoras"></select></p>
-        <p><input type="text" ng-model="item.endereco" placeholder="Insira seu endereço"></p>
-        <button ng-click="adicionarContato(item)" ng-disabled="!(item.nome && item.telefone)">Adicionar</button>
-    </div>
+<body>
+    <h1 style="color:{{blue}}">Minha página</h1>
+    <input style="background-color: {{color1}};" type="text" ng-model="color1" >
+    <ng-view></ng-view>
+    <footer>Testes de escopo</footer>
+    <h1>{{nome | lowercase}}</h1>
+    <h1 ng-controller="profCtrl">{{nome}}</h1>
+    <h1 ng-controller="alunoCtrl">{{nome}}</h1>
+    <script src="app/appAula8.js"></script>
+    <script src="routes/rotasAula8.js"></script>
+    <script src="controllers/controllerAula8.js"></script>
 </body>
-
 </html>
