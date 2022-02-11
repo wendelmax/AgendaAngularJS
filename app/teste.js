@@ -1,1 +1,4 @@
-alert("oi")
+
+function ola(msg){
+    alert(msg)
+}
