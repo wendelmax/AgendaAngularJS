@@ -1,4 +1,4 @@
 
 function ola(msg){
-    alert(msg)
+    alert(msg+'1')
 }
