@@ -3,5 +3,5 @@ app.controller("profCtrl", function ($scope) {
 });
 
 app.controller("alunoCtrl",function($scope){
-    $scope.nome = "Pedro";
+    $scope.nome = "Jackson";
 })
