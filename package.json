@@ -1,0 +1,28 @@
+{
+  "name": "agendaangularjs",
+  "version": "1.0.0",
+  "description": "Projeto simples aplicando conceitos AngularJS",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendelmax/AgendaAngularJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wendelmax/AgendaAngularJS/issues"
+  },
+  "homepage": "https://github.com/wendelmax/AgendaAngularJS#readme",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3"
+  }
+}
