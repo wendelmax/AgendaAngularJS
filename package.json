@@ -2,21 +2,20 @@
   "name": "agendaangularjs",
   "version": "1.0.0",
   "description": "Projeto simples aplicando conceitos AngularJS",
-  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
+    "start": "python3 -m http.server 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wendelmax/AgendaAngularJS.git"
   },
-  "keywords": [],
+  "keywords": ["angularjs", "spa", "routing"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/wendelmax/AgendaAngularJS/issues"
   },
